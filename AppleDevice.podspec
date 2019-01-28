@@ -12,15 +12,12 @@ Pod::Spec.new do |s|
   DESC
 
   s.source_files = 'AppleDevice/*.{h,m}'
-
-  # s.ios.frameworks = 'Foundation'
-  # s.tvos.frameworks = 'Foundation'
-  # s.osx.frameworks = 'Foundation'
   s.frameworks = 'Foundation'
-
+  s.requires_arc = true
+  
   s.ios.deployment_target = '6.0'
-  s.osx.deployment_target = '10.9'
+  # s.osx.deployment_target = '10.9'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
-  s.requires_arc = true
+  
 end

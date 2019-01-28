@@ -1,7 +1,6 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
 
 target 'Example' do
   project 'Example/Example'
-
+  
+  pod 'AppleDevice', :path => './'
 end

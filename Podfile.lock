@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 28e924282f6d61d367e8b17f21c4846527465a2a
+PODS:
+  - AppleDevice (1.0.0)
+
+DEPENDENCIES:
+  - AppleDevice (from `./`)
+
+EXTERNAL SOURCES:
+  AppleDevice:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  AppleDevice: 6f4bf6920794cbf7b6a300ce2dc61f393909cef3
+
+PODFILE CHECKSUM: 819a632ee4f0cbdf4da9880a72b97a7ed2d0913a
 
 COCOAPODS: 1.5.3

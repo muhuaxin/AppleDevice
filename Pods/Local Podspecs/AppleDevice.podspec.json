@@ -1,0 +1,23 @@
+{
+  "name": "AppleDevice",
+  "version": "1.0.0",
+  "license": "MIT",
+  "summary": "Apple Device Information",
+  "homepage": "https://github.com/muhuaxin/AppleDevice",
+  "authors": {
+    "Huaxin Mu": "bupt.muhuaxin@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/muhuaxin/AppleDevice.git",
+    "tag": "1.0.0"
+  },
+  "description": "AppleDevice supports iOS, macOS, tvOS and watchOS.",
+  "source_files": "AppleDevice/*.{h,m}",
+  "frameworks": "Foundation",
+  "platforms": {
+    "ios": "6.0",
+    "tvos": "9.0",
+    "watchos": "2.0"
+  },
+  "requires_arc": true
+}
