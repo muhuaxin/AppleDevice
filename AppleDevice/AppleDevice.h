@@ -8,6 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface AppleDevice : NSObject
 
++ (instancetype)currentDevice;
+
+/**
+ iPhone11,1 / MacBookPro15,1 / AppleTV2,1
+ */
+@property (nonatomic, strong, readonly, nonnull) NSString *deviceModel;
+
+/**
+ iPhone 7 Plus / MacBook Pro (15-inch, 2018) / AppleTV 2
+ */
+@property (nonatomic, strong, readonly, nonnull) NSString *deviceModelName;
+
+
+@property (nonatomic, assign, readonly, getter=isSimulator) BOOL simulator;
+
 @end
+
+NS_ASSUME_NONNULL_END

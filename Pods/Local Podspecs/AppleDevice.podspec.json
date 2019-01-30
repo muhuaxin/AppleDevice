@@ -14,10 +14,10 @@
   "description": "AppleDevice supports iOS, macOS, tvOS and watchOS.",
   "source_files": "AppleDevice/*.{h,m}",
   "frameworks": "Foundation",
+  "requires_arc": true,
   "platforms": {
     "ios": "6.0",
     "tvos": "9.0",
     "watchos": "2.0"
-  },
-  "requires_arc": true
+  }
 }

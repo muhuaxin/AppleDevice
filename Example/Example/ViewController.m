@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AppleDevice/AppleDevice.h>
 
 @interface ViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"%@", [AppleDevice currentDevice].deviceModel);
+    NSLog(@"%@", [AppleDevice currentDevice].deviceModelName);
 }
 
 
