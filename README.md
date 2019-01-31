@@ -1,6 +1,20 @@
 # AppleDevice
 
-## iPhone
+## Usage
+### Installation with CocoaPods
+```ruby
+pod 'AppleDevice'
+```
+
+### Example
+```objc
+NSLog(@"%@", [AppleDevice currentDevice].deviceModel);//iPhone11,2
+NSLog(@"%@", [AppleDevice currentDevice].deviceModelName);//iPhone XS
+```
+
+
+## Device Lists
+### iPhone
 | Model | Name |
 |:-:|:-:|
 |iPhone1,1|iPhone|
@@ -36,7 +50,7 @@
 |iPhone11,8|iPhone XR|
 
 
-## iPad
+### iPad
 | Model | Name |
 |:-:|:-:|
 |iPad1,1|iPad 1|
@@ -86,7 +100,7 @@
 |iPad8,7|iPad 12.9inch 3G|
 |iPad8,8|iPad 12.9inch 3G|
 
-## iPod
+### iPod
 | Model | Name |
 |:-:|:-:|
 |iPod1,1|iPod Touch 1G|
@@ -96,13 +110,13 @@
 |iPod5,1|iPod Touch 5G|
 |iPod7,1|iPod Touch 6G|
 
-## Simulator
+### Simulator
 | Model | Name |
 |:-:|:-:|
 |i386|i386|
 |x86_64|x86_64|
 
-## Apple TV
+### Apple TV
 | Model | Name |
 |:-:|:-:|
 |AppleTV2,1|AppleTV 2|
@@ -111,7 +125,7 @@
 |AppleTV5,3|AppleTV 4|
 |AppleTV6,2|AppleTV 4K|
 
-## Apple Watch
+### Apple Watch
 | Model | Name |
 |:-:|:-:|
 |Watch1,1|Apple Watch (38 mm)|
@@ -129,7 +143,7 @@
 |Watch4,3|Apple Watch Series 4 (40 mm)|
 |Watch4,4|Apple Watch Series 4 (44 mm)|
 
-## MacBook Pro
+### MacBook Pro
 | Model | Name |
 |:-:|:-:|
 |MacBookPro4,1|MacBook Pro (15-inch / 17-inch, Early 2008)|
@@ -162,7 +176,7 @@
 |MacBookPro15,1|MacBook Pro (15-inch, 2018)|
 |MacBookPro15,2|MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)|
 
-## MacBook Air
+### MacBook Air
 | Model | Name |
 |:-:|:-:|
 |MacBookAir2,1|MacBook Air (Mid 2009)|
@@ -178,7 +192,7 @@
 |MacBookAir7,2|MacBook Air (13-inch, Early 2015 / 2017)|
 |MacBookAir8,1|MacBook Air (Retina, 13-inch, 2018)|
 
-## MacBook
+### MacBook
 | Model | Name |
 |:-:|:-:|
 |MacBook5,2|MacBook (13-inch, Early 2009 / Mid 2009)|
@@ -188,7 +202,7 @@
 |MacBook9,1|MacBook (Retina, 12-inch, Early 2016)|
 |MacBook10,1|MacBook (Retina, 12-inch, 2017)|
 
-## iMac
+### iMac
 | Model | Name |
 |:-:|:-:|
 |iMac9,1|iMac (20-inch / 24-inch, Early 2009)|
@@ -210,14 +224,14 @@
 |iMac18,2|iMac (Retina 4K, 21.5-inch, 2017)|
 |iMac18,3|iMac (Retina 5K, 27-inch, 2017)|
 
-## MacPro
+### MacPro
 | Model | Name |
 |:-:|:-:|
 |MacPro4,1|Mac Pro (Early 2009)|
 |MacPro5,1|Mac Pro (Mid 2010 / Mid 2012)|
 |MacPro6,1|Mac Pro (Late 2013)|
 
-## Mac mimi
+### Mac mimi
 | Model | Name |
 |:-:|:-:|
 |Macmini3,1|Mac mini (2009)|
