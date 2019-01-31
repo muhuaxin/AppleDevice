@@ -32,7 +32,7 @@
     NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     return deviceModel;
 #elif TARGET_OS_MAC
-    size t size = 0;
+    size_t size = 0;
     sysctlbyname("hw.model", NULL, &size, NULL, 0);
     if (size > 0) {
         char model[size];
