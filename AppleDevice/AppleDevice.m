@@ -14,41 +14,48 @@
 #include <sys/sysctl.h>
 #endif
 
+@interface AppleDevice()
+
+@property (nonatomic, strong) NSString *deviceModel;
+@property (nonatomic, strong) NSString *deviceModelName;
+
+@end
+
 @implementation AppleDevice
 
 + (instancetype)currentDevice {
     static AppleDevice *_currentDevice;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _currentDevice = [[super alloc] init];
+        _currentDevice = [[self alloc] init];
     });
     return _currentDevice;
 }
 
 - (NSString *)deviceModel {
+    if (_deviceModel == nil) {
 #if TARGET_OS_IOS || TARGET_OS_TV
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    return deviceModel;
+        struct utsname systemInfo;
+        uname(&systemInfo);
+        NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+        _deviceModel = deviceModel;
 #elif TARGET_OS_MAC
-    size_t size = 0;
-    sysctlbyname("hw.model", NULL, &size, NULL, 0);
-    if (size > 0) {
-        char model[size];
-        sysctlbyname("hw.model", model, &size, NULL, 0);
-        NSString *deviceModel = [NSString stringWithCString:model encoding:NSUTF8StringEncoding];
-        return deviceModel;
-    }
-    return nil;
+        size_t size = 0;
+        sysctlbyname("hw.model", NULL, &size, NULL, 0);
+        if (size > 0) {
+            char model[size];
+            sysctlbyname("hw.model", model, &size, NULL, 0);
+            NSString *deviceModel = [NSString stringWithCString:model encoding:NSUTF8StringEncoding];
+            _deviceModel = deviceModel;
+        }
 #endif
+    }
+    return _deviceModel;
 }
-
-static NSString * _deviceModelName = nil;
 
 - (NSString *)deviceModelName {
     if (_deviceModelName == nil) {
-        NSString *machineString = [self deviceModel];
+        NSString *machineString = self.deviceModel;
 #if TARGET_OS_IOS || TARGET_OS_TV
         if ([machineString isEqualToString:@"iPhone1,1"])   _deviceModelName = @"iPhone";
         if ([machineString isEqualToString:@"iPhone1,2"])   _deviceModelName = @"iPhone 3G";
@@ -236,19 +243,13 @@ static NSString * _deviceModelName = nil;
         if ([machineString isEqualToString:@"MacPro4,1"])  _deviceModelName = @"Mac Pro (Early 2009)";
         if ([machineString isEqualToString:@"MacPro5,1"])  _deviceModelName = @"Mac Pro (Mid 2010 / Mid 2012)";
         if ([machineString isEqualToString:@"MacPro6,1"])  _deviceModelName = @"Mac Pro (Late 2013)";
-        
-        
-        if ([machineString isEqualToString:@"MacBookPro"])  _deviceModelName = @"";
-        if ([machineString isEqualToString:@"MacBookPro"])  _deviceModelName = @"";
-        if ([machineString isEqualToString:@"MacBookPro"])  _deviceModelName = @"";
-        if ([machineString isEqualToString:@"MacBookPro"])  _deviceModelName = @"";
 #endif
     }
     return _deviceModelName;
 }
 
 - (BOOL)isSimulator {
-    NSString *deviceModel = [self deviceModel];
+    NSString *deviceModel = self.deviceModel;
     return [deviceModel isEqualToString:@"i386"] || [deviceModel isEqualToString:@"x86_64"];
 }
 

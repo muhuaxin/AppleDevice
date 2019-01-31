@@ -17,12 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  iPhone11,1 / MacBookPro15,1 / AppleTV2,1
  */
-@property (nonatomic, strong, readonly, nonnull) NSString *deviceModel;
+@property (nonatomic, strong, readonly, nullable) NSString *deviceModel;
 
 /**
  iPhone 7 Plus / MacBook Pro (15-inch, 2018) / AppleTV 2
  */
-@property (nonatomic, strong, readonly, nonnull) NSString *deviceModelName;
+@property (nonatomic, strong, readonly, nullable) NSString *deviceModelName;
 
 
 @property (nonatomic, assign, readonly, getter=isSimulator) BOOL simulator;
