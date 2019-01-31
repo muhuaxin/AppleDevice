@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3637340FF36C7DBD2723209D /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F7B80979721AB987660FD /* libPods-Example.a */; };
+		22AA7EE098D0678BABBCC90C /* libPods-Example-watchOS Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7B7F2032854992012EEFA0 /* libPods-Example-watchOS Extension.a */; };
 		468FC2801870820244D7C17D /* libPods-Example-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D557F9BADC65F675D00674 /* libPods-Example-iOS.a */; };
 		8FE36BBEF03C7044D04B9C9D /* libPods-Example-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F674A9348058DF42CAA5EA16 /* libPods-Example-macOS.a */; };
 		DCC31EE321FB4EA40008EC1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC31EE221FB4EA40008EC1B /* AppDelegate.m */; };
@@ -20,13 +20,66 @@
 		DCD18E392202A97000D68724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD18E382202A97000D68724 /* Assets.xcassets */; };
 		DCD18E3C2202A97000D68724 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD18E3A2202A97000D68724 /* MainMenu.xib */; };
 		DCD18E3F2202A97000D68724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD18E3E2202A97000D68724 /* main.m */; };
+		DCD18E612202EC3B00D68724 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD18E5F2202EC3B00D68724 /* Interface.storyboard */; };
+		DCD18E632202EC3D00D68724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD18E622202EC3D00D68724 /* Assets.xcassets */; };
+		DCD18E6A2202EC3D00D68724 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DCD18E692202EC3D00D68724 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DCD18E702202EC3D00D68724 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD18E6F2202EC3D00D68724 /* InterfaceController.m */; };
+		DCD18E732202EC3D00D68724 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD18E722202EC3D00D68724 /* ExtensionDelegate.m */; };
+		DCD18E762202EC3D00D68724 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD18E752202EC3D00D68724 /* NotificationController.m */; };
+		DCD18E782202EC3E00D68724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD18E772202EC3E00D68724 /* Assets.xcassets */; };
+		DCD18E7D2202EC3E00D68724 /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DCD18E5D2202EC3B00D68724 /* Example-watchOS.app */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DCD18E6B2202EC3D00D68724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC31ED621FB4EA40008EC1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCD18E682202EC3D00D68724;
+			remoteInfo = "Example-watchOS Extension";
+		};
+		DCD18E7B2202EC3E00D68724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC31ED621FB4EA40008EC1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCD18E5C2202EC3B00D68724;
+			remoteInfo = "Example-watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCD18E832202EC3E00D68724 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DCD18E6A2202EC3D00D68724 /* Example-watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD18E852202EC3E00D68724 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DCD18E7D2202EC3E00D68724 /* Example-watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06741EC15AA2D1C7316453AF /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		08D557F9BADC65F675D00674 /* libPods-Example-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C3F7B80979721AB987660FD /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BED1593D0FEAE33D4FFB880 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3E7B7F2032854992012EEFA0 /* libPods-Example-watchOS Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example-watchOS Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		467204FB6856DAC8C24496CF /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		5DC64D6F4866945F535189FF /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		779792BB9C61C9D6B1F50EE8 /* libPods-Example-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9974F533E29EB1448B8C1390 /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B1D66EEC6BA4DC322B7E425C /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		B36008818CFE2CDCDDF4EBBB /* Pods-Example-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,16 +101,36 @@
 		DCD18E3D2202A97000D68724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD18E3E2202A97000D68724 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCD18E402202A97000D68724 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
+		DCD18E5D2202EC3B00D68724 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD18E602202EC3B00D68724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DCD18E622202EC3D00D68724 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCD18E642202EC3D00D68724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD18E692202EC3D00D68724 /* Example-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Example-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD18E6E2202EC3D00D68724 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		DCD18E6F2202EC3D00D68724 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		DCD18E712202EC3D00D68724 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		DCD18E722202EC3D00D68724 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		DCD18E742202EC3D00D68724 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		DCD18E752202EC3D00D68724 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		DCD18E772202EC3E00D68724 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCD18E792202EC3E00D68724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD18E7A2202EC3E00D68724 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		EFEB38081BB4401818869B05 /* Pods-Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		F674A9348058DF42CAA5EA16 /* libPods-Example-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A184C15D996BA08E64353C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCC31EDB21FB4EA40008EC1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3637340FF36C7DBD2723209D /* libPods-Example.a in Frameworks */,
 				468FC2801870820244D7C17D /* libPods-Example-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,15 +143,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCD18E662202EC3D00D68724 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22AA7EE098D0678BABBCC90C /* libPods-Example-watchOS Extension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BD6DB405E694E2AF266DFD63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C3F7B80979721AB987660FD /* libPods-Example.a */,
 				08D557F9BADC65F675D00674 /* libPods-Example-iOS.a */,
 				F674A9348058DF42CAA5EA16 /* libPods-Example-macOS.a */,
+				779792BB9C61C9D6B1F50EE8 /* libPods-Example-watchOS.a */,
+				3E7B7F2032854992012EEFA0 /* libPods-Example-watchOS Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +170,8 @@
 			children = (
 				DCC31EE021FB4EA40008EC1B /* Example-iOS */,
 				DCD18E342202A96E00D68724 /* Example-macOS */,
+				DCD18E5E2202EC3B00D68724 /* Example-watchOS */,
+				DCD18E6D2202EC3D00D68724 /* Example-watchOS Extension */,
 				DCC31EDF21FB4EA40008EC1B /* Products */,
 				F9EB28A6726711FF1E940785 /* Pods */,
 				BD6DB405E694E2AF266DFD63 /* Frameworks */,
@@ -99,6 +183,8 @@
 			children = (
 				DCC31EDE21FB4EA40008EC1B /* Example-iOS.app */,
 				DCD18E332202A96E00D68724 /* Example-macOS.app */,
+				DCD18E5D2202EC3B00D68724 /* Example-watchOS.app */,
+				DCD18E692202EC3D00D68724 /* Example-watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +219,32 @@
 			path = "Example-macOS";
 			sourceTree = "<group>";
 		};
+		DCD18E5E2202EC3B00D68724 /* Example-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				DCD18E5F2202EC3B00D68724 /* Interface.storyboard */,
+				DCD18E622202EC3D00D68724 /* Assets.xcassets */,
+				DCD18E642202EC3D00D68724 /* Info.plist */,
+			);
+			path = "Example-watchOS";
+			sourceTree = "<group>";
+		};
+		DCD18E6D2202EC3D00D68724 /* Example-watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DCD18E6E2202EC3D00D68724 /* InterfaceController.h */,
+				DCD18E6F2202EC3D00D68724 /* InterfaceController.m */,
+				DCD18E712202EC3D00D68724 /* ExtensionDelegate.h */,
+				DCD18E722202EC3D00D68724 /* ExtensionDelegate.m */,
+				DCD18E742202EC3D00D68724 /* NotificationController.h */,
+				DCD18E752202EC3D00D68724 /* NotificationController.m */,
+				DCD18E772202EC3E00D68724 /* Assets.xcassets */,
+				DCD18E792202EC3E00D68724 /* Info.plist */,
+				DCD18E7A2202EC3E00D68724 /* PushNotificationPayload.apns */,
+			);
+			path = "Example-watchOS Extension";
+			sourceTree = "<group>";
+		};
 		F9EB28A6726711FF1E940785 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +254,8 @@
 				1BED1593D0FEAE33D4FFB880 /* Pods-Example-iOS.release.xcconfig */,
 				B36008818CFE2CDCDDF4EBBB /* Pods-Example-macOS.debug.xcconfig */,
 				EFEB38081BB4401818869B05 /* Pods-Example-macOS.release.xcconfig */,
+				06741EC15AA2D1C7316453AF /* Pods-Example-watchOS Extension.debug.xcconfig */,
+				467204FB6856DAC8C24496CF /* Pods-Example-watchOS Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -157,10 +271,12 @@
 				DCC31EDA21FB4EA40008EC1B /* Sources */,
 				DCC31EDB21FB4EA40008EC1B /* Frameworks */,
 				DCC31EDC21FB4EA40008EC1B /* Resources */,
+				DCD18E852202EC3E00D68724 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DCD18E7C2202EC3E00D68724 /* PBXTargetDependency */,
 			);
 			name = "Example-iOS";
 			productName = Example;
@@ -185,6 +301,42 @@
 			productReference = DCD18E332202A96E00D68724 /* Example-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DCD18E5C2202EC3B00D68724 /* Example-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD18E842202EC3E00D68724 /* Build configuration list for PBXNativeTarget "Example-watchOS" */;
+			buildPhases = (
+				DCD18E5B2202EC3B00D68724 /* Resources */,
+				DCD18E832202EC3E00D68724 /* Embed App Extensions */,
+				A184C15D996BA08E64353C2A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCD18E6C2202EC3D00D68724 /* PBXTargetDependency */,
+			);
+			name = "Example-watchOS";
+			productName = "Example-watchOS";
+			productReference = DCD18E5D2202EC3B00D68724 /* Example-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DCD18E682202EC3D00D68724 /* Example-watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCD18E822202EC3E00D68724 /* Build configuration list for PBXNativeTarget "Example-watchOS Extension" */;
+			buildPhases = (
+				3A461BD4F0896280E1FF3E58 /* [CP] Check Pods Manifest.lock */,
+				DCD18E652202EC3D00D68724 /* Sources */,
+				DCD18E662202EC3D00D68724 /* Frameworks */,
+				DCD18E672202EC3D00D68724 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-watchOS Extension";
+			productName = "Example-watchOS Extension";
+			productReference = DCD18E692202EC3D00D68724 /* Example-watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +350,12 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					DCD18E322202A96E00D68724 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DCD18E5C2202EC3B00D68724 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DCD18E682202EC3D00D68724 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -217,6 +375,8 @@
 			targets = (
 				DCC31EDD21FB4EA40008EC1B /* Example-iOS */,
 				DCD18E322202A96E00D68724 /* Example-macOS */,
+				DCD18E5C2202EC3B00D68724 /* Example-watchOS */,
+				DCD18E682202EC3D00D68724 /* Example-watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -241,6 +401,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCD18E5B2202EC3B00D68724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD18E632202EC3D00D68724 /* Assets.xcassets in Resources */,
+				DCD18E612202EC3B00D68724 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD18E672202EC3D00D68724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD18E782202EC3E00D68724 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -260,6 +437,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Example-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A461BD4F0896280E1FF3E58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-watchOS Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,7 +509,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCD18E652202EC3D00D68724 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD18E732202EC3D00D68724 /* ExtensionDelegate.m in Sources */,
+				DCD18E702202EC3D00D68724 /* InterfaceController.m in Sources */,
+				DCD18E762202EC3D00D68724 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCD18E6C2202EC3D00D68724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCD18E682202EC3D00D68724 /* Example-watchOS Extension */;
+			targetProxy = DCD18E6B2202EC3D00D68724 /* PBXContainerItemProxy */;
+		};
+		DCD18E7C2202EC3E00D68724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCD18E5C2202EC3B00D68724 /* Example-watchOS */;
+			targetProxy = DCD18E7B2202EC3E00D68724 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DCC31EE721FB4EA40008EC1B /* Main.storyboard */ = {
@@ -335,6 +557,14 @@
 				DCD18E3B2202A97000D68724 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DCD18E5F2202EC3B00D68724 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD18E602202EC3B00D68724 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -458,14 +688,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6N2GYYGGJ;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.muhuaxin.Example-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,14 +707,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6N2GYYGGJ;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.muhuaxin.Example-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -534,6 +764,84 @@
 			};
 			name = Release;
 		};
+		DCD18E7E2202EC3E00D68724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
+				IBSC_MODULE = Example_watchOS_Extension;
+				INFOPLIST_FILE = "Example-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		DCD18E7F2202EC3E00D68724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
+				IBSC_MODULE = Example_watchOS_Extension;
+				INFOPLIST_FILE = "Example-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		DCD18E802202EC3E00D68724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06741EC15AA2D1C7316453AF /* Pods-Example-watchOS Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
+				INFOPLIST_FILE = "Example-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		DCD18E812202EC3E00D68724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467204FB6856DAC8C24496CF /* Pods-Example-watchOS Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8U3NWR72S;
+				INFOPLIST_FILE = "Example-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youdao.Example-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,6 +868,24 @@
 			buildConfigurations = (
 				DCD18E422202A97000D68724 /* Debug */,
 				DCD18E432202A97000D68724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD18E822202EC3E00D68724 /* Build configuration list for PBXNativeTarget "Example-watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD18E802202EC3E00D68724 /* Debug */,
+				DCD18E812202EC3E00D68724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCD18E842202EC3E00D68724 /* Build configuration list for PBXNativeTarget "Example-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD18E7E2202EC3E00D68724 /* Debug */,
+				DCD18E7F2202EC3E00D68724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
