@@ -8,7 +8,7 @@
 
 #import "AppleDevice.h"
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #include <sys/utsname.h>
 #elif TARGET_OS_MAC
 #include <sys/sysctl.h>
@@ -33,8 +33,9 @@
 }
 
 - (NSString *)deviceModel {
+
     if (_deviceModel == nil) {
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
         struct utsname systemInfo;
         uname(&systemInfo);
         NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
@@ -57,7 +58,7 @@
     if (_deviceModelName == nil) {
         NSString *deviceModel = self.deviceModel;
         NSDictionary *dict = nil;
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
         if ([deviceModel hasPrefix:@"iPhone"]) {
             dict = @{
                      @"iPhone1,1": @"iPhone",
@@ -157,6 +158,23 @@
                      @"AppleTV3,2": @"AppleTV 3",
                      @"AppleTV5,3": @"AppleTV 4",
                      @"AppleTV6,2": @"AppleTV 4K",
+                     };
+        } else if ([deviceModel hasPrefix:@"Watch"]) {
+            dict = @{
+                     @"Watch1,1": @"Apple Watch (38 mm)",
+                     @"Watch1,2": @"Apple Watch (42 mm)",
+                     @"Watch2,6": @"Apple Watch Series 1 (38 mm)",
+                     @"Watch2,7": @"Apple Watch Series 1 (42 mm)",
+                     @"Watch2,3": @"Apple Watch Series 2 (38 mm)",
+                     @"Watch2,4": @"Apple Watch Series 2 (42 mm)",
+                     @"Watch3,1": @"Apple Watch Series 3 (38 mm)",
+                     @"Watch3,2": @"Apple Watch Series 3 (42 mm)",
+                     @"Watch3,3": @"Apple Watch Series 3 (38 mm)",
+                     @"Watch3,4": @"Apple Watch Series 3 (42 mm)",
+                     @"Watch4,1": @"Apple Watch Series 4 (40 mm)",
+                     @"Watch4,2": @"Apple Watch Series 4 (44 mm)",
+                     @"Watch4,3": @"Apple Watch Series 4 (40 mm)",
+                     @"Watch4,4": @"Apple Watch Series 4 (44 mm)",
                      };
         } else if ([deviceModel isEqualToString:@"i386"] || [deviceModel isEqualToString:@"x86_64"]){
             dict = @{

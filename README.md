@@ -102,7 +102,7 @@
 |i386|i386|
 |x86_64|x86_64|
 
-## AppleTV
+## Apple TV
 | Model | Name |
 |:-:|:-:|
 |AppleTV2,1|AppleTV 2|
@@ -110,6 +110,24 @@
 |AppleTV3,2|AppleTV 3|
 |AppleTV5,3|AppleTV 4|
 |AppleTV6,2|AppleTV 4K|
+
+## Apple Watch
+| Model | Name |
+|:-:|:-:|
+|Watch1,1|Apple Watch (38 mm)|
+|Watch1,2|Apple Watch (42 mm)|
+|Watch2,6|Apple Watch Series 1 (38 mm)|
+|Watch2,7|Apple Watch Series 1 (42 mm)|
+|Watch2,3|Apple Watch Series 2 (38 mm)|
+|Watch2,4|Apple Watch Series 2 (42 mm)|
+|Watch3,1|Apple Watch Series 3 (38 mm)|
+|Watch3,2|Apple Watch Series 3 (42 mm)|
+|Watch3,3|Apple Watch Series 3 (38 mm)|
+|Watch3,4|Apple Watch Series 3 (42 mm)|
+|Watch4,1|Apple Watch Series 4 (40 mm)|
+|Watch4,2|Apple Watch Series 4 (44 mm)|
+|Watch4,3|Apple Watch Series 4 (40 mm)|
+|Watch4,4|Apple Watch Series 4 (44 mm)|
 
 ## MacBook Pro
 | Model | Name |
