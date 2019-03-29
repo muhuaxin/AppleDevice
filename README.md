@@ -99,6 +99,10 @@ NSLog(@"%@", [AppleDevice currentDevice].deviceModelName);//iPhone XS
 |iPad8,6|iPad 12.9inch 3G|
 |iPad8,7|iPad 12.9inch 3G|
 |iPad8,8|iPad 12.9inch 3G|
+|iPad11,1|iPad Mini 5|
+|iPad11,2|iPad Mini 5|
+|iPad11,3|iPad Air 3|
+|iPad11,4|iPad Air 3|
 
 ### iPod
 | Model | Name |

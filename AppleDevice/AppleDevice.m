@@ -141,6 +141,10 @@
                      @"iPad8,6": @"iPad Pro 12.9inch 3G",
                      @"iPad8,7": @"iPad Pro 12.9inch 3G",
                      @"iPad8,8": @"iPad Pro 12.9inch 3G",
+                     @"iPad11,1": @"iPad Mini 5",
+                     @"iPad11,2": @"iPad Mini 5",
+                     @"iPad11,3": @"iPad Air 3",
+                     @"iPad11,4": @"iPad Air 3",
                      };
         } else if ([deviceModel hasPrefix:@"iPod"]) {
             dict = @{
