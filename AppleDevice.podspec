@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'AppleDevice'
-  s.version  = '1.0.1'
+  s.version  = '1.0.2'
   s.license  = 'MIT'
   s.summary  = 'Apple Device Information'
   s.homepage = 'https://github.com/muhuaxin/AppleDevice'

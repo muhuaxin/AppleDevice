@@ -113,6 +113,7 @@ NSLog(@"%@", [AppleDevice currentDevice].deviceModelName);//iPhone XS
 |iPod4,1|iPod Touch 4G|
 |iPod5,1|iPod Touch 5G|
 |iPod7,1|iPod Touch 6G|
+|iPod9,1|iPod Touch 7G|
 
 ### Simulator
 | Model | Name |
