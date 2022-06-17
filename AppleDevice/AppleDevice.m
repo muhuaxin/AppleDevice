@@ -92,6 +92,18 @@
                      @"iPhone11,4": @"iPhone XS Max",
                      @"iPhone11,6": @"iPhone XS Max",
                      @"iPhone11,8": @"iPhone XR",
+                     @"iPhone12,1": @"iPhone 11",
+                     @"iPhone12,3": @"iPhone 11 Pro",
+                     @"iPhone12,5": @"iPhone 11 Pro Max",
+                     @"iPhone12,8": @"iPhone SE 2nd Generation",
+                     @"iPhone13,1": @"iPhone 12 mini",
+                     @"iPhone13,2": @"iPhone 12",
+                     @"iPhone13,3": @"iPhone 12 Pro",
+                     @"iPhone13,4": @"iPhone 12 Pro Max",
+                     @"iPhone14,2": @"iPhone 13 Pro",
+                     @"iPhone14,3": @"iPhone 13 Pro Max",
+                     @"iPhone14,4": @"iPhone 13 Mini",
+                     @"iPhone14,5": @"iPhone 13",
                      };
         } else if ([deviceModel hasPrefix:@"iPad"]) {
             dict = @{
@@ -145,6 +157,22 @@
                      @"iPad11,2": @"iPad Mini 5",
                      @"iPad11,3": @"iPad Air 3",
                      @"iPad11,4": @"iPad Air 3",
+                     @"iPad11,6": @"iPad 8th Gen WiFi",
+                     @"iPad11,7": @"iPad 8th Gen WiFi+LTE",
+                     @"iPad12,1": @"iPad 9th Gen WiFi",
+                     @"iPad12,2": @"iPad 9th Gen WiFi+LTE",
+                     @"iPad13,1": @"iPad Air 4 WiFi",
+                     @"iPad13,2": @"iPad Air 4 WiFi+LTE",
+                     @"iPad13,4": @"iPad Pro 11inch WiFi",
+                     @"iPad13,5": @"iPad Pro 11inch WiFi+LTE",
+                     @"iPad13,6": @"iPad Pro 11inch WiFi+LTE",
+                     @"iPad13,7": @"iPad Pro 11inch WiFi+LTE",
+                     @"iPad13,8": @"iPad Pro 12.9inch WiFi",
+                     @"iPad13,9": @"iPad Pro 12.9inch WiFi+LTE",
+                     @"iPad13,10": @"iPad Pro 12.9inch WiFi+LTE",
+                     @"iPad13,11": @"iPad Pro 12.9inch WiFi+LTE",
+                     @"iPad14,1": @"iPad Mini 6 WiFi",
+                     @"iPad14,2": @"iPad Mini 6 WiFi+LTE",
                      };
         } else if ([deviceModel hasPrefix:@"iPod"]) {
             dict = @{
